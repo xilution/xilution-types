@@ -1,6 +1,6 @@
 {
   "name": "xilution-types",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Spenser Andreassen <spenserca@gmail.com>",
   "license": "UNLICENSED",
   "repository": {
@@ -9,7 +9,6 @@
   "bugs": {
     "url": "https://github.com/xilution/xilution-types/issues"
   },
-  "private": true,
   "scripts": {
     "lint": "dtslint .",
     "release": "yarn lint && npx semantic-release --ci false"
