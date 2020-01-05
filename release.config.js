@@ -21,6 +21,10 @@ module.exports = {
       {
         release: 'patch',
         type: 'style'
+      },
+      {
+        release: 'patch',
+        type: 'chore'
       }
     ]
   },
