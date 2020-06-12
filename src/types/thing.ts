@@ -1,5 +1,5 @@
 export interface IThing {
-  "@type": string;
+  "@type"?: string;
   id?: string;
   [key: string]: any;
 }
