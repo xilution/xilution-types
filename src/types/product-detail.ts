@@ -1,3 +1,5 @@
+import { IThing } from "./thing";
+
 export type ICurrency = string | "USD";
 
 export type IUnit = string | "Hours";
@@ -12,8 +14,7 @@ export interface IRate {
   price: number;
 }
 
-export interface IProductDetails {
-  id: string;
+export interface IProductDetails extends IThing {
   name: string;
   tier: string;
   productName: string;

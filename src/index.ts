@@ -1,14 +1,10 @@
-export {
-  IOrganization,
-} from "./types/organization";
+export { IThing } from "./types/thing";
 
-export {
-  IClient,
-} from "./types/client";
+export { IOrganization } from "./types/organization";
 
-export {
-  IUser,
-} from "./types/user";
+export { IClient } from "./types/client";
+
+export { IUser } from "./types/user";
 
 export {
   ICurrency,
