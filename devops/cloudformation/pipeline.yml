@@ -1,0 +1,90 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  Repository:
+    Type: String
+  XilutionProdAccountId:
+    Type: String
+
+Resources:
+  #  TODO: move this to common cicd resources
+  BuildPublishNpm:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Sub ${AWS::StackName}-build-publish-npm
+      ServiceRole: !Sub arn:aws:iam::${AWS::AccountId}:role/Deployer
+      EncryptionKey: alias/xilution-build-artifact-key
+      Cache:
+        Type: NO_CACHE
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:2.0
+        PrivilegedMode: true
+        EnvironmentVariables:
+          - Name: ARTIFACT_STORE
+            Value: xilution-build-artifacts
+      Source:
+        BuildSpec: devops/buildspecs/npm.buildspec.yml
+        Type: CODEPIPELINE
+      Artifacts:
+        Type: CODEPIPELINE
+
+  PipelineWebhook:
+    Type: AWS::CodePipeline::Webhook
+    Properties:
+      Authentication: GITHUB_HMAC
+      AuthenticationConfiguration:
+        SecretToken: "{{resolve:secretsmanager:GithubCodePipelineToken:SecretString:GithubCodePipelineToken}}"
+      Filters:
+        - JsonPath: $.ref
+          MatchEquals: "refs/heads/{Branch}"
+      TargetPipeline: !Ref Pipeline
+      TargetAction: Source
+      TargetPipelineVersion: !GetAtt Pipeline.Version
+      RegisterWithThirdParty: true
+
+  Pipeline:
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
+      Name: !Ref AWS::StackName
+      ArtifactStore:
+        Type: S3
+        Location: xilution-build-artifacts
+        EncryptionKey:
+          Id: !Sub arn:aws:kms:us-east-1:${AWS::AccountId}:key/8d04ab66-485b-4c49-a1bc-cf53e120bbf3
+          Type: KMS
+      RoleArn: !Sub arn:aws:iam::${AWS::AccountId}:role/Pipeline
+      RestartExecutionOnUpdate: true
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: Source
+              ActionTypeId:
+                Category: Source
+                Provider: GitHub
+                Owner: ThirdParty
+                Version: 1
+              OutputArtifacts:
+                - Name: SourceCode
+              Configuration:
+                Owner: xilution
+                Repo: !Ref Repository
+                Branch: master
+                OAuthToken: "{{resolve:secretsmanager:xilution-github-credentials:SecretString:token}}"
+                PollForSourceChanges: false
+        - Name: Build_And_Publish
+          Actions:
+            - Name: Build_Package
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Provider: CodeBuild
+                Version: 1
+              InputArtifacts:
+                - Name: SourceCode
+              Configuration:
+                ProjectName: !Sub ${AWS::StackName}-build-publish-npm
+                EnvironmentVariables: !Sub '[{"name":"REPOSITORY","value":"${Repository}"}]'
+              RoleArn: !Sub arn:aws:iam::${AWS::AccountId}:role/Deployer
