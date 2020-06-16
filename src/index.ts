@@ -12,3 +12,7 @@ export {
   IRate,
   IProductDetails,
 } from "./types/product-detail";
+
+export {
+  IPlatformDetails,
+} from "./types/platform-details";
