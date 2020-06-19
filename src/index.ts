@@ -10,6 +10,12 @@ export { IUser } from "./types/user";
 
 export {
   IRate,
+  IUsagePlan,
+  ITimescaleData,
+  IBurst,
+  IQuota,
+  IThrottle,
+  ILimit,
   IProductDetails,
   ITierDetails,
   IPhaseDetails,

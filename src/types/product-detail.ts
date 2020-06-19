@@ -16,23 +16,31 @@ export interface IUsagePlan {
   rates: IRate[];
 }
 
+export interface ITimescaleData {
+  value: number;
+  unit: string;
+  timescale: string;
+}
+
+export interface IBurst {
+  value: number;
+  unit: string;
+}
+
+export interface IQuota {
+  value: number;
+  unit: string;
+  timescale: string;
+}
+
+export interface IThrottle {
+  rate: ITimescaleData;
+  burst: IBurst;
+  quota: IQuota;
+}
+
 export interface ILimit {
-  throttle: {
-    rate: {
-      value: number;
-      unit: string;
-      timescale: string;
-    };
-    burst: {
-      value: number;
-      unit: string;
-    };
-    quota: {
-      value: number;
-      unit: string;
-      timescale: string;
-    };
-  };
+  throttle: IThrottle;
 }
 
 export interface IProductDetails extends IThing {
