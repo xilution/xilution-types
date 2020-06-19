@@ -11,41 +11,45 @@ export interface IRate {
   price: number;
 }
 
+export interface IUsagePlan {
+  type: string;
+  rates: IRate[];
+}
+
+export interface ILimit {
+  throttle: {
+    rate: {
+      value: number;
+      unit: string;
+      timescale: string;
+    };
+    burst: {
+      value: number;
+      unit: string;
+    };
+    quota: {
+      value: number;
+      unit: string;
+      timescale: string;
+    };
+  };
+}
+
 export interface IProductDetails extends IThing {
   name: string;
   tier: string;
   productName: string;
   productCode: string;
   phase: string;
-  usagePlan: {
-    type: string;
-    rates: IRate[];
-  };
+  usagePlan: IUsagePlan;
   limits: {
-    [env: string]: {
-      throttle: {
-        rate: {
-          value: number;
-          unit: string;
-          timescale: string;
-        };
-        burst: {
-          value: number;
-          unit: string;
-        };
-        quota: {
-          value: number;
-          unit: string;
-          timescale: string;
-        };
-      };
-    };
+    [env: string]: ILimit;
   };
   logo: string;
   spec: string;
   portal: string;
   i18n: {
-    en: {
+    [locale: string]: {
       shortDescription: string;
       longDescription: string;
       features: string[];
@@ -57,7 +61,7 @@ export interface ITierDetails extends IThing {
   name: string;
   logo: string;
   i18n: {
-    en: {
+    [locale: string]: {
       shortDescription: string;
     };
   };
@@ -66,7 +70,7 @@ export interface ITierDetails extends IThing {
 export interface IPhaseDetails extends IThing {
   name: string;
   i18n: {
-    en: {
+    [locale: string]: {
       longDescription: string;
     };
   };
