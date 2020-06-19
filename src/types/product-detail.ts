@@ -67,7 +67,7 @@ export interface IProductDetails extends IThing {
 export interface ITierDetails extends IThing {
   name: string;
   logo: string;
-  il8n: {
+  i18n: {
     en: {
       shortDescription: string;
     };
@@ -76,7 +76,7 @@ export interface ITierDetails extends IThing {
 
 export interface IPhaseDetails extends IThing {
   name: string;
-  il8n: {
+  i18n: {
     en: {
       longDescription: string;
     };
