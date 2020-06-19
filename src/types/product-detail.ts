@@ -13,7 +13,7 @@ export interface IRate {
 
 export interface IUsagePlan {
   type: string;
-  rates: IRate[];
+  rates?: IRate[];
 }
 
 export interface ITimescaleData {
@@ -36,7 +36,7 @@ export interface IQuota {
 export interface IThrottle {
   rate: ITimescaleData;
   burst: IBurst;
-  quota: IQuota;
+  quota?: IQuota;
 }
 
 export interface ILimit {
@@ -61,8 +61,8 @@ export interface IProductDetails extends IThing {
   i18n: {
     [locale: string]: {
       shortDescription: string;
-      longDescription: string;
-      features: string[];
+      longDescription?: string;
+      features?: string[];
     };
   };
 }
