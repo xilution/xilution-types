@@ -1,8 +1,5 @@
 import { IThing } from "./thing";
-
-export type ICurrency = string | "USD";
-
-export type IUnit = string | "Hours";
+import {ICurrency, IUnit} from "./enums";
 
 export interface IRate {
   metric: {
@@ -25,7 +22,7 @@ export interface IProductDetails extends IThing {
     rates: IRate[];
   };
   limits: {
-    test: {
+    [env: string]: {
       throttle: {
         rate: {
           value: number;
@@ -36,18 +33,10 @@ export interface IProductDetails extends IThing {
           value: number;
           unit: string;
         };
-      };
-    };
-    prod: {
-      throttle: {
-        rate: {
+        quota: {
           value: number;
           unit: string;
           timescale: string;
-        };
-        burst: {
-          value: number;
-          unit: string;
         };
       };
     };
