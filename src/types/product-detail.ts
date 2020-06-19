@@ -43,6 +43,10 @@ export interface ILimit {
   throttle: IThrottle;
 }
 
+export interface ILimits {
+  [env: string]: ILimit;
+}
+
 export interface IProductDetails extends IThing {
   name: string;
   tier: string;
@@ -50,9 +54,7 @@ export interface IProductDetails extends IThing {
   productCode: string;
   phase: string;
   usagePlan: IUsagePlan;
-  limits: {
-    [env: string]: ILimit;
-  };
+  limits: ILimits;
   logo: string;
   spec: string;
   portal: string;
