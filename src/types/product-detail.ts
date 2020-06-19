@@ -1,5 +1,5 @@
 import { IThing } from "./thing";
-import {ICurrency, IUnit} from "./enums";
+import { ICurrency, IUnit } from "./enums";
 
 export interface IRate {
   metric: {
@@ -60,7 +60,7 @@ export interface ITierDetails extends IThing {
     en: {
       shortDescription: string;
     };
-  }
+  };
 }
 
 export interface IPhaseDetails extends IThing {
@@ -69,5 +69,5 @@ export interface IPhaseDetails extends IThing {
     en: {
       longDescription: string;
     };
-  }
+  };
 }

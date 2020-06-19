@@ -1,8 +1,4 @@
-export {
-  IEnvironment,
-  ICurrency,
-  IUnit,
-} from "./types/enums";
+export { IEnvironment, ICurrency, IUnit } from "./types/enums";
 
 export { IThing } from "./types/thing";
 
@@ -19,6 +15,4 @@ export {
   IPhaseDetails,
 } from "./types/product-detail";
 
-export {
-  IPlatformDetails,
-} from "./types/platform-details";
+export { IPlatformDetails } from "./types/platform-details";
