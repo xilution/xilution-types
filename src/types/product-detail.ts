@@ -63,3 +63,22 @@ export interface IProductDetails extends IThing {
     };
   };
 }
+
+export interface ITierDetails extends IThing {
+  name: string;
+  logo: string;
+  il8n: {
+    en: {
+      shortDescription: string;
+    };
+  }
+}
+
+export interface IPhaseDetails extends IThing {
+  name: string;
+  il8n: {
+    en: {
+      longDescription: string;
+    };
+  }
+}

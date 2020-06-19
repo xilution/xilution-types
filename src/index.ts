@@ -11,6 +11,8 @@ export {
   IUnit,
   IRate,
   IProductDetails,
+  ITierDetails,
+  IPhaseDetails,
 } from "./types/product-detail";
 
 export {
