@@ -1,8 +1,0 @@
-devops
-coverage
-
-.git*
-tsconfig.json
-
-**/*.spec.js
-**/*.ts

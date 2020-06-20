@@ -8,10 +8,11 @@
   },
   "scripts": {
     "build": "tsc -p .",
-    "clean": "rm **/*.js && rm **/*.map && rm **/*.d.ts",
+    "clean": "rm -rf ./dist",
     "format": "prettier-standard --format",
     "lint": "prettier-standard --check",
-    "verify": "npm run format && npm run lint"
+    "verify": "npm run format && npm run lint",
+    "watch": "nodemon -e ts --watch src --exec \"npm run build\""
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,11 @@
   },
   "homepage": "https://github.com/xilution/xilution-types",
   "files": [
-    "src/**/*.js",
-    "src/**/*.d.ts",
-    "index.d.ts"
+    "dist",
+    "src"
   ],
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -37,6 +37,7 @@
     "@semantic-release/npm": "^7.0.5",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "husky": "^3.1.0",
+    "nodemon": "^2.0.4",
     "prettier-standard": "^16.3.0",
     "typescript": "^3.8.3"
   },
@@ -50,33 +51,13 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "**/*.ts"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/*.spec.ts"
-    ],
-    "transform": {
-      "\\.ts$": "ts-jest"
-    }
-  },
   "prettier": {
     "jsxSingleQuote": false,
     "semi": true,
     "singleQuote": false,
     "trailingComma": "all",
-    "arrowParens": "always"
+    "arrowParens": "always",
+    "printWidth": 100
   },
   "release": {
     "plugins": [
