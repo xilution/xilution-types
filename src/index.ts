@@ -22,3 +22,18 @@ export {
 } from "./types/product-detail";
 
 export { IPlatformDetails } from "./types/platform-details";
+
+export {
+  ILink,
+} from "./types/links";
+
+export {
+  IPipeline,
+  IStatus,
+  IExtendedPipeline,
+  IActionDetails,
+  IStageDetails,
+  IPipelineExecutionDetails,
+  IPipelineExecutionSummary,
+  IPipelineExecutionHistory,
+} from "./types/pipelines";
