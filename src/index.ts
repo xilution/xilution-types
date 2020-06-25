@@ -23,9 +23,7 @@ export {
 
 export { IPlatformDetails } from "./types/platform-details";
 
-export {
-  ILink,
-} from "./types/links";
+export { ILink } from "./types/links";
 
 export {
   IPipeline,
