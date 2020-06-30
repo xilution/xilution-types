@@ -1,5 +1,5 @@
 import { IThing } from "./thing";
-import { ILink } from "./links";
+import { ILink } from "./link";
 
 export interface IPipeline extends IThing {
   name: string;
