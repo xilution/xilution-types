@@ -21,9 +21,9 @@ export {
   IPhaseDetails,
 } from "./types/product-detail";
 
-export { IPlatformDetails } from "./types/platform-details";
+export { IPlatformDetails } from "./types/platform-detail";
 
-export { ILink } from "./types/links";
+export { ILink } from "./types/link";
 
 export {
   IPipeline,
@@ -34,4 +34,12 @@ export {
   IPipelineExecutionDetails,
   IPipelineExecutionSummary,
   IPipelineExecutionHistory,
-} from "./types/pipelines";
+} from "./types/pipeline";
+
+export { IActivation } from "./types/activation";
+
+export { ICreditCard } from "./types/credit-card";
+
+export { IInvoice } from "./types/invoice";
+
+export { IEffective } from "./types/shared";
