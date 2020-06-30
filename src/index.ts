@@ -43,3 +43,8 @@ export { ICreditCard } from "./types/credit-card";
 export { IInvoice } from "./types/invoice";
 
 export { IEffective } from "./types/shared";
+
+export {
+  ILambdaContext,
+  ILambdaEvent,
+} from "./types/aws-lambda";
