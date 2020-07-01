@@ -5,5 +5,6 @@ export interface ICreditCard {
   expYear: number;
   name: string | null;
   number?: string;
+  last4?: string;
   brand: 'Visa' | 'American Express' | 'MasterCard' | 'Discover' | 'JCB' | 'Diners Club' | 'Unknown';
 }
