@@ -5,5 +5,7 @@ export interface IThing {
   id?: string;
   owningUserId?: string;
   links?: IAPILink[];
+  createdAt?: string;
+  modifiedAt?: string;
   [key: string]: any;
 }
