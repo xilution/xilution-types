@@ -17,3 +17,10 @@ export interface ILambdaEvent {
     body: any;
     parameters: any;
 }
+
+export interface IActionResponse {
+    context: {
+        location?: string,
+    };
+    payload?: any;
+}

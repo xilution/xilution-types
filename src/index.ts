@@ -47,4 +47,5 @@ export { IEffective } from "./types/shared";
 export {
   ILambdaContext,
   ILambdaEvent,
+  IActionResponse,
 } from "./types/aws-lambda";
