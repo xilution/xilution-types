@@ -6,9 +6,9 @@ export interface ILambdaContext {
   productCode: string;
   operation: string;
   environment: string;
-  user: IUser;
-  organization: IOrganization;
-  client: IClient;
+  user: IUser & { id: string };
+  organization: IOrganization & { id: string };
+  client: IClient & { id: string };
   indexOrganizationId: string;
 }
 

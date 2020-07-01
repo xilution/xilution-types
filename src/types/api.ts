@@ -1,6 +1,6 @@
 export interface IAPILink {
-  "rel": string;
-  "href": string;
+  rel: string;
+  href: string;
 }
 
 export interface ISearchCriteria {

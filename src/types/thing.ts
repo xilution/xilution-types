@@ -1,5 +1,5 @@
-import {IAPILink} from "./api";
-import {ILink} from "./link";
+import { IAPILink } from "./api";
+import { ILink } from "./link";
 
 export interface IThing {
   "@type"?: string;

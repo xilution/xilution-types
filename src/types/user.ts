@@ -1,4 +1,4 @@
-import {IThing} from "./thing";
+import { IThing } from "./thing";
 
 export interface IUser extends IThing {
   firstName: string;
