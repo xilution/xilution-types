@@ -1,9 +1,11 @@
+export interface IReceipt {
+  paid: boolean;
+}
+
 export interface IInvoice {
   id: string;
   start: string;
-  receipt: {
-    paid: boolean;
-  };
+  receipt: IReceipt;
   total: number;
   currency?: string;
 }

@@ -40,7 +40,7 @@ export { IActivation } from "./types/activation";
 
 export { ICreditCard } from "./types/credit-card";
 
-export { IInvoice } from "./types/invoice";
+export { IReceipt, IInvoice } from "./types/invoice";
 
 export { IEffective } from "./types/shared";
 
