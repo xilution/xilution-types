@@ -50,4 +50,4 @@ export { IHealth } from "./types/health";
 
 export { IBrand } from "./types/brand";
 
-export { ISearchCriteria, IFetchThingsResponse } from "./types/api";
+export { IAPILink, ISearchCriteria, IFetchThingsResponse } from "./types/api";
