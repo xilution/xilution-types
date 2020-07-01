@@ -44,8 +44,6 @@ export { IInvoice } from "./types/invoice";
 
 export { IEffective } from "./types/shared";
 
-export {
-  ILambdaContext,
-  ILambdaEvent,
-  IActionResponse,
-} from "./types/aws-lambda";
+export { ILambdaContext, ILambdaEvent, IActionResponse } from "./types/aws-lambda";
+
+export { IHealth } from "./types/health";
