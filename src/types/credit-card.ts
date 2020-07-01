@@ -3,6 +3,6 @@ export interface ICreditCard {
   cvc: string;
   expMonth: number;
   expYear: number;
-  name: string;
+  name: string | null;
   number: string;
 }
