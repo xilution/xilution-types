@@ -1,4 +1,4 @@
-export { IEnvironment, ICurrency, IUnit } from "./types/enums";
+export { IEnvironment, ICurrency, IUnit, ICreditCardBrands } from "./types/enums";
 
 export { IThing } from "./types/thing";
 

@@ -1,3 +1,5 @@
+import {ICreditCardBrands} from "./enums";
+
 export interface ICreditCard {
   id?: string;
   cvc?: string;
@@ -6,12 +8,5 @@ export interface ICreditCard {
   name: string | null;
   number?: string;
   last4?: string;
-  brand:
-    | "Visa"
-    | "American Express"
-    | "MasterCard"
-    | "Discover"
-    | "JCB"
-    | "Diners Club"
-    | "Unknown";
+  brand: ICreditCardBrands;
 }

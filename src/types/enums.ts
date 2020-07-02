@@ -16,3 +16,13 @@ export enum IUnit {
   G_BYTES = "GBytes",
   ONE_THOUSAND_REQUESTS = "One Thousand Requests",
 }
+
+export enum ICreditCardBrands {
+  VISA = "Visa",
+  AMERICAN_EXPRESS = "American Express",
+  MASTER_CARD = "MasterCard",
+  DISCOVER = "Discover",
+  JCB = "JCB",
+  DINERS_CLUB = "Diners Club",
+  UNKNOWN = "Unknown",
+}
