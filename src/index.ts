@@ -5,8 +5,9 @@ export {
   CURRENCIES,
   IUnit,
   UNITS,
-  ICreditCardBrands,
+  ICreditCardBrand,
   CREDIT_CARD_BRANDS,
+  mapCreditCardBrand,
 } from "./types/enums";
 
 export { IThing } from "./types/thing";

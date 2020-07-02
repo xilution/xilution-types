@@ -34,7 +34,7 @@ export const UNITS: string[] = [
   IUnit.ONE_THOUSAND_REQUESTS,
 ];
 
-export enum ICreditCardBrands {
+export enum ICreditCardBrand {
   VISA = "Visa",
   AMERICAN_EXPRESS = "American Express",
   MASTER_CARD = "MasterCard",
@@ -45,11 +45,32 @@ export enum ICreditCardBrands {
 }
 
 export const CREDIT_CARD_BRANDS: string[] = [
-  ICreditCardBrands.VISA,
-  ICreditCardBrands.AMERICAN_EXPRESS,
-  ICreditCardBrands.MASTER_CARD,
-  ICreditCardBrands.DISCOVER,
-  ICreditCardBrands.JCB,
-  ICreditCardBrands.DINERS_CLUB,
-  ICreditCardBrands.UNKNOWN,
+  ICreditCardBrand.VISA,
+  ICreditCardBrand.AMERICAN_EXPRESS,
+  ICreditCardBrand.MASTER_CARD,
+  ICreditCardBrand.DISCOVER,
+  ICreditCardBrand.JCB,
+  ICreditCardBrand.DINERS_CLUB,
+  ICreditCardBrand.UNKNOWN,
 ];
+
+export const mapCreditCardBrand = (creditCardBrand: string): ICreditCardBrand =>  {
+  switch (creditCardBrand) {
+    case ICreditCardBrand.VISA:
+      return ICreditCardBrand.VISA;
+    case ICreditCardBrand.AMERICAN_EXPRESS:
+      return ICreditCardBrand.AMERICAN_EXPRESS;
+    case ICreditCardBrand.MASTER_CARD:
+      return ICreditCardBrand.MASTER_CARD;
+    case ICreditCardBrand.DISCOVER:
+      return ICreditCardBrand.DISCOVER;
+    case ICreditCardBrand.JCB:
+      return ICreditCardBrand.JCB;
+    case ICreditCardBrand.DINERS_CLUB:
+      return ICreditCardBrand.DINERS_CLUB;
+    case ICreditCardBrand.UNKNOWN:
+      return ICreditCardBrand.UNKNOWN;
+    default:
+      return ICreditCardBrand.UNKNOWN;
+  }
+};

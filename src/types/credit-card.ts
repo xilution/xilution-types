@@ -1,4 +1,4 @@
-import { ICreditCardBrands } from "./enums";
+import { ICreditCardBrand } from "./enums";
 
 export interface ICreditCard {
   id?: string;
@@ -8,5 +8,5 @@ export interface ICreditCard {
   name: string | null;
   number?: string;
   last4?: string;
-  brand: ICreditCardBrands;
+  brand: ICreditCardBrand;
 }
