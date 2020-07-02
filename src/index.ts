@@ -1,4 +1,13 @@
-export { IEnvironment, ICurrency, IUnit, ICreditCardBrands } from "./types/enums";
+export {
+  IEnvironment,
+  ENVIRONMENTS,
+  ICurrency,
+  CURRENCIES,
+  IUnit,
+  UNITS,
+  ICreditCardBrands,
+  CREDIT_CARD_BRANDS,
+} from "./types/enums";
 
 export { IThing } from "./types/thing";
 

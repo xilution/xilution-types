@@ -1,4 +1,4 @@
-import {ICreditCardBrands} from "./enums";
+import { ICreditCardBrands } from "./enums";
 
 export interface ICreditCard {
   id?: string;
