@@ -61,3 +61,5 @@ export { IHealth } from "./types/health";
 export { IBrand } from "./types/brand";
 
 export { IAPILink, ISearchCriteria, IFetchThingsResponse } from "./types/api";
+
+export { IProductEvent } from "./types/product-event";
