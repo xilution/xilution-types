@@ -1,4 +1,4 @@
-import {IThing} from "./thing";
+import { IThing } from "./thing";
 
 export interface IProductEvent extends IThing {
   "@type": "product-event";

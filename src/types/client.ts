@@ -1,7 +1,7 @@
 import { IThing } from "./thing";
 
 export interface IClient extends IThing {
-  "@type": "client",
+  "@type": "client";
   name: string;
   active: boolean;
   clientUserId: string;

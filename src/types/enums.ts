@@ -54,7 +54,7 @@ export const CREDIT_CARD_BRANDS: string[] = [
   ICreditCardBrand.UNKNOWN,
 ];
 
-export const mapCreditCardBrand = (creditCardBrand: string): ICreditCardBrand =>  {
+export const mapCreditCardBrand = (creditCardBrand: string): ICreditCardBrand => {
   switch (creditCardBrand) {
     case ICreditCardBrand.VISA:
       return ICreditCardBrand.VISA;

@@ -1,7 +1,7 @@
 import { IThing } from "./thing";
 
 export interface IUser extends IThing {
-  "@type": "user",
+  "@type": "user";
   active: boolean;
   email: string;
   firstName: string;
