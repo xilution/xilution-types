@@ -9,8 +9,8 @@
   "scripts": {
     "build": "tsc -p .",
     "clean": "rm -rf ./dist",
-    "format": "prettier-standard --format",
-    "lint": "prettier-standard --check",
+    "format": "npx prettier-standard --format '**/*.{ts,tsx,js,jsx,scss,json,md,html,yaml,yml,webmanifest}'",
+    "lint": "npx prettier-standard --check '**/*.{ts,tsx,js,jsx,scss,json,md,html,yaml,yml,webmanifest}'",
     "verify": "npm run format && npm run lint",
     "watch": "nodemon -e ts --watch src --exec \"npm run build\""
   },
