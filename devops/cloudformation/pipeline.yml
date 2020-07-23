@@ -36,7 +36,7 @@ Resources:
     Properties:
       Authentication: GITHUB_HMAC
       AuthenticationConfiguration:
-        SecretToken: "{{resolve:secretsmanager:GithubCodePipelineToken:SecretString:GithubCodePipelineToken}}"
+        SecretToken: "{{resolve:secretsmanager:xilution-github-credentials:SecretString:token}}"
       Filters:
         - JsonPath: $.ref
           MatchEquals: "refs/heads/{Branch}"
