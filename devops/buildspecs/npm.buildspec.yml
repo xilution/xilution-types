@@ -12,7 +12,7 @@ phases:
     runtime-versions:
       docker: 18
     commands:
-      - git clone https://$GITHUB_USER:xilutionI%24DaBomb@github.com/xilution/$REPOSITORY.git
+      - git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/xilution/$REPOSITORY.git
       - cd $REPOSITORY
       - npm ci
 
