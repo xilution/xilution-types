@@ -65,6 +65,7 @@ export interface IProductDetails extends IThing {
       features?: string[];
     };
   };
+  tags?: string[];
 }
 
 export interface ITierDetails extends IThing {
