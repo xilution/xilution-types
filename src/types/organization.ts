@@ -6,6 +6,6 @@ export interface IOrganization extends IThing {
   active?: boolean;
   logo?: string;
   domain?: string;
-  iamClientId?: string;
+  authClientId?: string;
   organizationId?: string;
 }
