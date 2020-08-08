@@ -9,4 +9,5 @@ export interface IClient extends IThing {
   organizationId: string;
   owningUserId: string;
   redirectUris: string[];
+  secret?: string;
 }
