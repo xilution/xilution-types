@@ -4,4 +4,7 @@ export interface IBrand {
   logo?: string;
   authClientId?: string;
   url?: string;
+  autoAuth?: boolean;
+  showSignUp?: boolean;
+  domain: string;
 }
