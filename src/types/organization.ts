@@ -8,4 +8,7 @@ export interface IOrganization extends IThing {
   domain?: string;
   authClientId?: string;
   organizationId?: string;
+  url?: string;
+  autoAuth?: boolean;
+  showSignUp?: boolean;
 }
