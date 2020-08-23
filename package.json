@@ -7,7 +7,7 @@
     "tag": "latest"
   },
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npx tsc -p .",
     "clean": "rm -rf ./dist",
     "format": "npx prettier-standard --format '**/*.{ts,tsx,js,jsx,scss,json,md,html,yaml,yml,webmanifest}'",
     "lint": "npx prettier-standard --check '**/*.{ts,tsx,js,jsx,scss,json,md,html,yaml,yml,webmanifest}'",

@@ -65,3 +65,5 @@ export { IAPILink, ISearchCriteria, IFetchThingsResponse } from "./types/api";
 export { IProductEvent } from "./types/product-event";
 
 export { ICredentials } from "./types/credentials";
+
+export { IMessages } from "./types/messages";
