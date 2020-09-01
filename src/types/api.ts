@@ -4,7 +4,8 @@ export interface IAPILink {
 }
 
 export interface ISearchCriteria {
-  criteria: any;
+  criteria?: any;
+  dynamodb?: any;
   "@type": string;
   owningUserId: string;
   id?: string;
