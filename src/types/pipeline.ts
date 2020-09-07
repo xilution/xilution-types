@@ -3,6 +3,7 @@ import { ILink } from "./link";
 
 export interface IPipeline extends IThing {
   name: string;
+  pipelineType: string;
 }
 
 export interface IStatus {
