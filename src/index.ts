@@ -33,7 +33,7 @@ export {
 
 export { IPlatformDetails } from "./types/platform-detail";
 
-export { ILink } from "./types/link";
+export { ILink, ILinkType, LINK_TYPES } from "./types/link";
 
 export {
   IPipeline,
@@ -60,7 +60,7 @@ export { IHealth } from "./types/health";
 
 export { IBrand } from "./types/brand";
 
-export { IAPILink, ISearchCriteria, IFetchThingsResponse } from "./types/api";
+export { ISearchCriteria, IFetchThingsResponse } from "./types/api";
 
 export { IProductEvent } from "./types/product-event";
 

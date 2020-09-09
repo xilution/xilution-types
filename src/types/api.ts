@@ -1,7 +1,4 @@
-export interface IAPILink {
-  rel: string;
-  href: string;
-}
+import { ILink } from "./link";
 
 export interface ISearchCriteria {
   criteria?: any;
@@ -16,6 +13,6 @@ export interface IFetchThingsResponse<T> {
   firstPage: boolean;
   lastPage: boolean;
   totalPages: number;
-  id: IAPILink;
-  links: IAPILink[];
+  id: ILink;
+  links: ILink[];
 }

@@ -1,5 +1,16 @@
+export enum ILinkType {
+  EXTERNAL = "EXTERNAL",
+  INTERNAL = "INTERNAL",
+}
+
+export const LINK_TYPES: string[] = [ILinkType.EXTERNAL, ILinkType.INTERNAL];
+
 export interface ILink {
-  labelId: string;
-  uri: string;
-  type: string;
+  href: string;
+  rel?: string;
+  label?: {
+    default: string;
+    [locale: string]: string;
+  };
+  type?: string;
 }
