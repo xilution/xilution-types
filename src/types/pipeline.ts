@@ -15,7 +15,6 @@ export interface IStatus {
 }
 
 export interface IExtendedPipeline extends IPipeline {
-  links: ILink[];
   status?: IStatus;
 }
 
