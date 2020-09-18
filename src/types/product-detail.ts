@@ -11,7 +11,7 @@ export interface IRate {
   price: number;
   tags?: string[];
   description?: string;
-  features?: string;
+  features?: string[];
 }
 
 export interface IUsagePlan {
