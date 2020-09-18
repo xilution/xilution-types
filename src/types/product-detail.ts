@@ -9,6 +9,9 @@ export interface IRate {
   currency: ICurrency;
   unit: IUnit;
   price: number;
+  tags?: string[];
+  description?: string;
+  features?: string;
 }
 
 export interface IUsagePlan {
