@@ -56,8 +56,8 @@ export interface IPipelineExecutionHistory {
 }
 
 export interface IPipelineExecutionLog {
-  timestamp: string,
-  message: string,
+  timestamp: string;
+  message: string;
 }
 
 export interface IPipelineExecutionLogs {
