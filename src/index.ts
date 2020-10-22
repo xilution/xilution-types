@@ -44,6 +44,7 @@ export {
   IPipelineExecutionDetails,
   IPipelineExecutionSummary,
   IPipelineExecutionHistory,
+  IPipelineExecutionLogs,
 } from "./types/pipeline";
 
 export { IActivation } from "./types/activation";

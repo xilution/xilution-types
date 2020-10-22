@@ -54,3 +54,13 @@ export interface IPipelineExecutionHistory {
   pipelineName: string;
   summaries: IPipelineExecutionSummary[];
 }
+
+export interface IPipelineExecutionLog {
+  timestamp: string,
+  message: string,
+}
+
+export interface IPipelineExecutionLogs {
+  pipelineName: string;
+  logs: IPipelineExecutionLog[];
+}
