@@ -63,5 +63,6 @@ export interface IPipelineExecutionLog {
 export interface IPipelineExecutionLogs {
   pipelineName: string;
   pipelineStageName: string;
+  pipelineActionName: string;
   logs: IPipelineExecutionLog[];
 }
