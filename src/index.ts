@@ -45,6 +45,10 @@ export {
   IPipelineExecutionSummary,
   IPipelineExecutionHistory,
   IPipelineExecutionLogs,
+  IStage,
+  IGazellePipeline,
+  ICoyotePipeline,
+  IFoxPipeline,
 } from "./types/pipeline";
 
 export { IActivation } from "./types/activation";

@@ -66,3 +66,36 @@ export interface IPipelineExecutionLogs {
   pipelineActionName: string;
   logs: IPipelineExecutionLog[];
 }
+
+export interface IStage {
+  name: string;
+  links?: ILink[];
+}
+
+export interface IGazellePipeline extends IPipeline {
+  provider: string;
+  accountId: string;
+  region: string;
+  organizationId: string;
+  status?: IStatus;
+}
+
+export interface ICoyotePipeline extends IPipeline {
+  provider: string;
+  accountId: string;
+  region: string;
+  source: string;
+  branch: string;
+  stages: IStage[];
+  organizationId: string;
+  status?: IStatus;
+}
+
+export interface IFoxPipeline extends IPipeline {
+  gazellePipelineId: string;
+  source: string;
+  branch: string;
+  stages: IStage[];
+  organizationId: string;
+  status?: IStatus;
+}
