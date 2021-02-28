@@ -36,6 +36,7 @@ export { IPlatformDetails } from "./types/platform-detail";
 export { ILink, ILinkType, LINK_TYPES } from "./types/link";
 
 export {
+  IStage,
   IPipeline,
   IStatus,
   IExtendedPipeline,
@@ -44,12 +45,27 @@ export {
   IPipelineExecutionDetails,
   IPipelineExecutionSummary,
   IPipelineExecutionHistory,
+  IPipelineExecutionLog,
   IPipelineExecutionLogs,
-  IStage,
-  IGazellePipeline,
-  ICoyotePipeline,
-  IFoxPipeline,
-} from "./types/pipeline";
+  IActionExecution,
+  IStageExecution,
+  IPipelineExecution,
+  IGitHub,
+  ICloudConfig,
+  IPipelineParameters,
+  IFetchPipelinesParameters,
+  IFetchPipelineExecutionsParameters,
+  IPipelineExecutionParameters,
+  IPipelineExecutionLogsParameters,
+  IFetchPipelinesResponse,
+  IMessage,
+} from "./types/pipeline/shared";
+
+export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basics-gazelle";
+
+export { ICoyotePipeline, ICoyotePipelineDetails } from "./types/pipeline/content-delivery-coyote";
+
+export { IFoxPipeline, IFoxPipelineDetails } from "./types/pipeline/integration-fox";
 
 export { IActivation } from "./types/activation";
 
