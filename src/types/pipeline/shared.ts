@@ -11,6 +11,13 @@ export interface IPipeline extends IThing {
   pipelineType: string;
 }
 
+export interface IPipelineDetails {
+  name: string;
+  productCode: string;
+  pipelineType: string;
+  pipelineId: string;
+}
+
 export interface IStatus {
   continuousIntegrationStatus?: {
     latestDownExecutionStatus?: string;

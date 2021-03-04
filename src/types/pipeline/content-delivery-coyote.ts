@@ -1,4 +1,11 @@
-import { ICloudConfig, IGitHub, IPipeline, IStage, IStageDetails } from "./shared";
+import {
+  ICloudConfig,
+  IGitHub,
+  IPipeline,
+  IPipelineDetails,
+  IStage,
+  IStageDetails,
+} from "./shared";
 
 export interface ICoyotePipeline extends IPipeline {
   provider: string;
@@ -10,13 +17,11 @@ export interface ICoyotePipeline extends IPipeline {
   organizationId: string;
 }
 
-export interface ICoyotePipelineDetails {
+export interface ICoyotePipelineDetails extends IPipelineDetails {
   branch: string;
-  name: string;
   github: IGitHub;
   stages: IStageDetails[];
-  coyotePipelineId?: string;
-  productCode: string;
   cloudConfig: ICloudConfig;
-  pipelineType: string;
+  gazellePipelineId?: string;
+  coyotePipelineId?: string;
 }

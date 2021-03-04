@@ -38,6 +38,7 @@ export { ILink, ILinkType, LINK_TYPES } from "./types/link";
 export {
   IStage,
   IPipeline,
+  IPipelineDetails,
   IStatus,
   IExtendedPipeline,
   IActionDetails,

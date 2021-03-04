@@ -1,4 +1,12 @@
-import { IGitHub, IPipeline, IStage, IStageDetails, IStatus } from "./shared";
+import {
+  ICloudConfig,
+  IGitHub,
+  IPipeline,
+  IPipelineDetails,
+  IStage,
+  IStageDetails,
+  IStatus,
+} from "./shared";
 
 export interface IFoxPipeline extends IPipeline {
   gazellePipelineId: string;
@@ -9,16 +17,11 @@ export interface IFoxPipeline extends IPipeline {
   status?: IStatus;
 }
 
-export interface IFoxPipelineDetails {
-  provider: string;
-  accountId: string;
-  region: string;
-  name: string;
+export interface IFoxPipelineDetails extends IPipelineDetails {
   branch: string;
   github: IGitHub;
   stages: IStageDetails[];
-  foxPipelineId?: string;
+  cloudConfig: ICloudConfig;
   gazellePipelineId?: string;
-  productCode: string;
-  pipelineType: string;
+  foxPipelineId?: string;
 }
