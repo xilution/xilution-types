@@ -14,6 +14,7 @@ export interface IPipeline extends IThing {
 export interface IPipelineDetails {
   name: string;
   productCode: string;
+  productId: string;
   pipelineType: string;
   pipelineId: string;
 }
