@@ -114,7 +114,7 @@ export interface ICloudConfig {
 
 export interface IPipelineParameters {
   organizationId: string;
-  pipelineId?: string;
+  pipelineId: string;
 }
 
 export interface IFetchPipelinesParameters {
