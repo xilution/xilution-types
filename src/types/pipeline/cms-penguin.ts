@@ -1,4 +1,11 @@
-import {ICloudConfig, IGitHub, IPipeline, IPipelineDetails, IStage, IStageDetails} from "./shared";
+import {
+  ICloudConfig,
+  IGitHub,
+  IPipeline,
+  IPipelineDetails,
+  IStage,
+  IStageDetails,
+} from "./shared";
 
 export interface IPenguinPipeline extends IPipeline {
   source: string;

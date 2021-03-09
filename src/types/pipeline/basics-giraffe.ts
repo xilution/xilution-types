@@ -1,4 +1,4 @@
-import {ICloudConfig, IPipeline, IPipelineDetails} from "./shared";
+import { ICloudConfig, IPipeline, IPipelineDetails } from "./shared";
 
 export interface IGiraffePipeline extends IPipeline {
   gazellePipelineId: string;
