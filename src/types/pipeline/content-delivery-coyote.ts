@@ -22,6 +22,6 @@ export interface ICoyotePipelineDetails extends IPipelineDetails {
   github: IGitHub;
   stages: IStageDetails[];
   cloudConfig: ICloudConfig;
-  gazellePipelineId?: string;
-  coyotePipelineId?: string;
+  gazellePipelineId: string;
+  coyotePipelineId: string;
 }

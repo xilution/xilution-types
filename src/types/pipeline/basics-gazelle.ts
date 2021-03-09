@@ -9,5 +9,5 @@ export interface IGazellePipeline extends IPipeline {
 
 export interface IGazellePipelineDetails extends IPipelineDetails {
   cloudConfig: ICloudConfig;
-  gazellePipelineId?: string;
+  gazellePipelineId: string;
 }

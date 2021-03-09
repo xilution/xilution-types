@@ -64,6 +64,10 @@ export {
 
 export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basics-gazelle";
 
+export { IGiraffePipeline, IGiraffePipelineDetails } from "./types/pipeline/basics-giraffe";
+
+export { IPenguinPipeline, IPenguinPipelineDetails } from "./types/pipeline/cms-penguin";
+
 export { ICoyotePipeline, ICoyotePipelineDetails } from "./types/pipeline/content-delivery-coyote";
 
 export { IFoxPipeline, IFoxPipelineDetails } from "./types/pipeline/integration-fox";

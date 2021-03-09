@@ -41,7 +41,7 @@ export interface IActionDetails {
 }
 
 export interface IStageDetails {
-  name?: string;
+  name: string;
   actions?: IActionDetails[];
   status?: string;
 }
