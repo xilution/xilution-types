@@ -66,11 +66,26 @@ export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basi
 
 export { IGiraffePipeline, IGiraffePipelineDetails } from "./types/pipeline/basics-giraffe";
 
-export { IPenguinPipeline, IPenguinPipelineDetails } from "./types/pipeline/cms-penguin";
+export {
+  IPenguinStage,
+  IPenguinPipeline,
+  IPenguinStageDetails,
+  IPenguinPipelineDetails,
+} from "./types/pipeline/cms-penguin";
 
-export { ICoyotePipeline, ICoyotePipelineDetails } from "./types/pipeline/content-delivery-coyote";
+export {
+  ICoyoteStage,
+  ICoyotePipeline,
+  ICoyoteStageDetails,
+  ICoyotePipelineDetails,
+} from "./types/pipeline/content-delivery-coyote";
 
-export { IFoxPipeline, IFoxPipelineDetails } from "./types/pipeline/integration-fox";
+export {
+  IFoxStage,
+  IFoxPipeline,
+  IFoxStageDetails,
+  IFoxPipelineDetails,
+} from "./types/pipeline/integration-fox";
 
 export { IActivation } from "./types/activation";
 

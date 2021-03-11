@@ -5,7 +5,12 @@ import {
   IPipelineDetails,
   IStage,
   IStageDetails,
+  IStatus,
 } from "./shared";
+
+export interface ICoyoteStage extends IStage {
+  siteUrl?: string;
+}
 
 export interface ICoyotePipeline extends IPipeline {
   provider: string;
@@ -13,14 +18,18 @@ export interface ICoyotePipeline extends IPipeline {
   region: string;
   source: string;
   branch: string;
-  stages: IStage[];
-  organizationId: string;
+  stages: ICoyoteStage[];
+  status?: IStatus;
+}
+
+export interface ICoyoteStageDetails extends IStageDetails {
+  siteUrl?: string;
 }
 
 export interface ICoyotePipelineDetails extends IPipelineDetails {
   branch: string;
   github: IGitHub;
-  stages: IStageDetails[];
+  stages: ICoyoteStageDetails[];
   cloudConfig: ICloudConfig;
   coyotePipelineId: string;
 }
