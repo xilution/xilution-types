@@ -5,7 +5,6 @@ import {
   IPipelineDetails,
   IStage,
   IStageDetails,
-  IStatus,
 } from "./shared";
 
 export interface IPenguinStage extends IStage {
@@ -17,7 +16,6 @@ export interface IPenguinPipeline extends IPipeline {
   branch: string;
   stages: IPenguinStage[];
   giraffePipelineId: string;
-  status?: IStatus;
 }
 
 export interface IPenguinStageDetails extends IStageDetails {

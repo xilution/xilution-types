@@ -10,6 +10,7 @@ export interface IPipeline extends IThing {
   name: string;
   pipelineType: string;
   organizationId: string;
+  status?: IStatus;
 }
 
 export interface IPipelineDetails {

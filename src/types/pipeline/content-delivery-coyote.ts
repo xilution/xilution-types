@@ -5,7 +5,6 @@ import {
   IPipelineDetails,
   IStage,
   IStageDetails,
-  IStatus,
 } from "./shared";
 
 export interface ICoyoteStage extends IStage {
@@ -19,7 +18,6 @@ export interface ICoyotePipeline extends IPipeline {
   source: string;
   branch: string;
   stages: ICoyoteStage[];
-  status?: IStatus;
 }
 
 export interface ICoyoteStageDetails extends IStageDetails {

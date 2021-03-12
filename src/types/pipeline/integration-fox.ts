@@ -5,7 +5,6 @@ import {
   IPipelineDetails,
   IStage,
   IStageDetails,
-  IStatus,
 } from "./shared";
 
 export interface IFoxStage extends IStage {
@@ -17,7 +16,6 @@ export interface IFoxPipeline extends IPipeline {
   source: string;
   branch: string;
   stages: IFoxStage[];
-  status?: IStatus;
 }
 
 export interface IFoxStageDetails extends IStageDetails {

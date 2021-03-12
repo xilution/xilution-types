@@ -1,8 +1,7 @@
-import { ICloudConfig, IPipeline, IPipelineDetails, IStatus } from "./shared";
+import { ICloudConfig, IPipeline, IPipelineDetails } from "./shared";
 
 export interface IGiraffePipeline extends IPipeline {
   gazellePipelineId: string;
-  status?: IStatus;
   loadBalancerUrl?: string;
 }
 

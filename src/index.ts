@@ -66,6 +66,8 @@ export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basi
 
 export { IGiraffePipeline, IGiraffePipelineDetails } from "./types/pipeline/basics-giraffe";
 
+export { IKangarooPipeline, IKangarooPipelineDetails } from "./types/pipeline/basics-kangaroo";
+
 export {
   IPenguinStage,
   IPenguinPipeline,
