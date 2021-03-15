@@ -21,5 +21,6 @@ export interface IFoxPipelineDetails extends IPipelineDetails {
   stages: IFoxStageDetails[];
   cloudConfig: ICloudConfig;
   gazellePipelineId: string;
+  swanPipelineId: string;
   foxPipelineId: string;
 }

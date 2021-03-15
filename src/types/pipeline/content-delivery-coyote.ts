@@ -21,5 +21,6 @@ export interface ICoyotePipelineDetails extends IPipelineDetails {
   stages: ICoyoteStageDetails[];
   cloudConfig: ICloudConfig;
   kangarooPipelineId: string;
+  swanPipelineId: string;
   coyotePipelineId: string;
 }

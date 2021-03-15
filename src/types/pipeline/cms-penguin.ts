@@ -21,5 +21,6 @@ export interface IPenguinPipelineDetails extends IPipelineDetails {
   stages: IPenguinStageDetails[];
   cloudConfig: ICloudConfig;
   giraffePipelineId: string;
+  swanPipelineId: string;
   penguinPipelineId: string;
 }
