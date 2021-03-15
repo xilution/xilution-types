@@ -1,21 +1,14 @@
-import {
-  ICloudConfig,
-  IGitHub,
-  IPipeline,
-  IPipelineDetails,
-  IStage,
-  IStageDetails,
-} from "./shared";
+import { ICloudConfig, IGit, IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 
 export interface IPenguinStage extends IStage {
   siteUrl?: string;
 }
 
 export interface IPenguinPipeline extends IPipeline {
-  source: string;
+  giraffePipelineId: string;
+  swanPipelineId: string;
   branch: string;
   stages: IPenguinStage[];
-  giraffePipelineId: string;
 }
 
 export interface IPenguinStageDetails extends IStageDetails {
@@ -24,7 +17,7 @@ export interface IPenguinStageDetails extends IStageDetails {
 
 export interface IPenguinPipelineDetails extends IPipelineDetails {
   branch: string;
-  github: IGitHub;
+  git: IGit;
   stages: IPenguinStageDetails[];
   cloudConfig: ICloudConfig;
   giraffePipelineId: string;

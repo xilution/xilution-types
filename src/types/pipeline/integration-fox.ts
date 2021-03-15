@@ -1,11 +1,4 @@
-import {
-  ICloudConfig,
-  IGitHub,
-  IPipeline,
-  IPipelineDetails,
-  IStage,
-  IStageDetails,
-} from "./shared";
+import { ICloudConfig, IGit, IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 
 export interface IFoxStage extends IStage {
   apiBaseUrl?: string;
@@ -13,7 +6,7 @@ export interface IFoxStage extends IStage {
 
 export interface IFoxPipeline extends IPipeline {
   gazellePipelineId: string;
-  source: string;
+  swanPipelineId: string;
   branch: string;
   stages: IFoxStage[];
 }
@@ -24,7 +17,7 @@ export interface IFoxStageDetails extends IStageDetails {
 
 export interface IFoxPipelineDetails extends IPipelineDetails {
   branch: string;
-  github: IGitHub;
+  git: IGit;
   stages: IFoxStageDetails[];
   cloudConfig: ICloudConfig;
   gazellePipelineId: string;
