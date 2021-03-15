@@ -16,7 +16,7 @@
     "provision": "npx xln-provision --repository xilution-types --stackName xilution-types",
     "reprovision": "npx xln-reprovision --repository xilution-types --stackName xilution-types",
     "deprovision": "npx xln-deprovision --repository xilution-types --stackName xilution-types",
-    "release": "npm run verify && npm run build && npx semantic-release --ci false"
+    "release": "npm run verify && npm run build && npm publish"
   },
   "repository": {
     "type": "git",
