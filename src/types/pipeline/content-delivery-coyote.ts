@@ -12,9 +12,7 @@ export interface ICoyoteStage extends IStage {
 }
 
 export interface ICoyotePipeline extends IPipeline {
-  provider: string;
-  accountId: string;
-  region: string;
+  kangarooPipelineId: string;
   source: string;
   branch: string;
   stages: ICoyoteStage[];
@@ -29,5 +27,6 @@ export interface ICoyotePipelineDetails extends IPipelineDetails {
   github: IGitHub;
   stages: ICoyoteStageDetails[];
   cloudConfig: ICloudConfig;
+  kangarooPipelineId: string;
   coyotePipelineId: string;
 }
