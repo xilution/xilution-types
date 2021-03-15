@@ -103,6 +103,11 @@ export interface IPipelineExecution {
   stages?: IStageExecution[];
 }
 
+export interface IGit {
+  accountId: string;
+  repo: string;
+}
+
 export interface IGitHub {
   owner: string;
   repo: string;
