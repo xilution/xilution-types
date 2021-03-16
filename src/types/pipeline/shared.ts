@@ -104,6 +104,7 @@ export interface IPipelineExecution {
 }
 
 export interface IGit {
+  provider: string;
   accountId: string;
   repo: string;
 }

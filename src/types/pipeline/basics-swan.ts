@@ -1,6 +1,7 @@
 import { IGit, IPipeline, IPipelineDetails } from "./shared";
 
 export interface ISwanPipeline extends IPipeline {
+  provider: string;
   accountId: string;
   repo: string;
 }
