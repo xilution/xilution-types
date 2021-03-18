@@ -51,8 +51,6 @@ export {
   IActionExecution,
   IStageExecution,
   IPipelineExecution,
-  IGitHub,
-  ICloudConfig,
   IPipelineParameters,
   IFetchPipelinesParameters,
   IFetchPipelineExecutionsParameters,
@@ -65,10 +63,6 @@ export {
 export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basics-gazelle";
 
 export { IGiraffePipeline, IGiraffePipelineDetails } from "./types/pipeline/basics-giraffe";
-
-export { IKangarooPipeline, IKangarooPipelineDetails } from "./types/pipeline/basics-kangaroo";
-
-export { ISwanPipeline, ISwanPipelineDetails } from "./types/pipeline/basics-swan";
 
 export {
   IPenguinStage,
@@ -112,3 +106,7 @@ export { IProductEvent } from "./types/product-event";
 export { ICredentials } from "./types/credentials";
 
 export { IMessages } from "./types/messages";
+
+export { ICloudProvider } from "./types/cloud-provider";
+
+export { IGitRepo } from "./types/git-repo";

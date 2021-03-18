@@ -103,23 +103,6 @@ export interface IPipelineExecution {
   stages?: IStageExecution[];
 }
 
-export interface IGit {
-  provider: string;
-  accountId: string;
-  repo: string;
-}
-
-export interface IGitHub {
-  owner: string;
-  repo: string;
-}
-
-export interface ICloudConfig {
-  accountId: string;
-  provider: string;
-  region: string;
-}
-
 export interface IPipelineParameters {
   organizationId: string;
   pipelineId: string;
