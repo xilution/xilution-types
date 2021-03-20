@@ -1,4 +1,6 @@
-import { ICloudConfig, IGit, IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
+import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
+import { IGitRepo } from "../git-repo";
+import { ICloudProvider } from "../cloud-provider";
 
 export interface IFoxStage extends IStage {
   apiBaseUrl?: string;
@@ -17,9 +19,9 @@ export interface IFoxStageDetails extends IStageDetails {
 
 export interface IFoxPipelineDetails extends IPipelineDetails {
   branch: string;
-  git: IGit;
+  gitRepo: IGitRepo;
   stages: IFoxStageDetails[];
-  cloudConfig: ICloudConfig;
+  cloudProvider: ICloudProvider;
   gazellePipelineId: string;
   swanPipelineId: string;
   foxPipelineId: string;

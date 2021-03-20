@@ -1,4 +1,5 @@
-import { ICloudConfig, IPipeline, IPipelineDetails } from "./shared";
+import { IPipeline, IPipelineDetails } from "./shared";
+import { ICloudProvider } from "../cloud-provider";
 
 export interface IGiraffePipeline extends IPipeline {
   gazellePipelineId: string;
@@ -6,7 +7,7 @@ export interface IGiraffePipeline extends IPipeline {
 }
 
 export interface IGiraffePipelineDetails extends IPipelineDetails {
-  cloudConfig: ICloudConfig;
+  cloudProvider: ICloudProvider;
   gazellePipelineId: string;
   giraffePipelineId: string;
   loadBalancerUrl?: string;

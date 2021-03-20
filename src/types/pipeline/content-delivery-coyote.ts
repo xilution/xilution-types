@@ -1,4 +1,6 @@
-import { ICloudConfig, IGit, IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
+import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
+import { IGitRepo } from "../git-repo";
+import { ICloudProvider } from "../cloud-provider";
 
 export interface ICoyoteStage extends IStage {
   siteUrl?: string;
@@ -17,9 +19,9 @@ export interface ICoyoteStageDetails extends IStageDetails {
 
 export interface ICoyotePipelineDetails extends IPipelineDetails {
   branch: string;
-  git: IGit;
+  gitRepo: IGitRepo;
   stages: ICoyoteStageDetails[];
-  cloudConfig: ICloudConfig;
+  cloudProvider: ICloudProvider;
   kangarooPipelineId: string;
   swanPipelineId: string;
   coyotePipelineId: string;
