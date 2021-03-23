@@ -1,6 +1,7 @@
 import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 import { IGitRepo } from "../git-repo";
 import { ICloudProvider } from "../cloud-provider";
+import { IGazellePipeline } from "./basics-gazelle";
 
 export interface IFoxStage extends IStage {
   apiBaseUrl?: string;
@@ -8,7 +9,7 @@ export interface IFoxStage extends IStage {
 
 export interface IFoxPipeline extends IPipeline {
   gazellePipelineId: string;
-  swanPipelineId: string;
+  gitRepoId: string;
   branch: string;
   stages: IFoxStage[];
 }
@@ -19,10 +20,12 @@ export interface IFoxStageDetails extends IStageDetails {
 
 export interface IFoxPipelineDetails extends IPipelineDetails {
   branch: string;
-  gitRepo: IGitRepo;
   stages: IFoxStageDetails[];
-  cloudProvider: ICloudProvider;
+  gazellePipeline: IGazellePipeline;
   gazellePipelineId: string;
-  swanPipelineId: string;
+  cloudProvider: ICloudProvider;
+  cloudProviderId: string;
+  gitRepo: IGitRepo;
+  gitRepoId: string;
   foxPipelineId: string;
 }

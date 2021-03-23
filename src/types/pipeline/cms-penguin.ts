@@ -2,6 +2,8 @@ import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 import { IGitRepo } from "../git-repo";
 import { ICoyoteStageDetails } from "./content-delivery-coyote";
 import { ICloudProvider } from "../cloud-provider";
+import { IGiraffePipeline } from "./basics-giraffe";
+import { IGazellePipeline } from "./basics-gazelle";
 
 export interface IPenguinStage extends IStage {
   siteUrl?: string;
@@ -9,7 +11,7 @@ export interface IPenguinStage extends IStage {
 
 export interface IPenguinPipeline extends IPipeline {
   giraffePipelineId: string;
-  swanPipelineId: string;
+  gitRepoId: string;
   branch: string;
   stages: IPenguinStage[];
 }
@@ -20,10 +22,14 @@ export interface IPenguinStageDetails extends IStageDetails {
 
 export interface IPenguinPipelineDetails extends IPipelineDetails {
   branch: string;
-  gitRepo: IGitRepo;
   stages: ICoyoteStageDetails[];
   cloudProvider: ICloudProvider;
+  cloudProviderId: string;
+  gazellePipelineId: string;
+  gazellePipeline: IGazellePipeline;
   giraffePipelineId: string;
-  swanPipelineId: string;
+  giraffePipeline: IGiraffePipeline;
+  gitRepo: IGitRepo;
+  gitRepoId: string;
   penguinPipelineId: string;
 }

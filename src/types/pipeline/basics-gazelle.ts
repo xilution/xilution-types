@@ -2,11 +2,11 @@ import { IPipeline, IPipelineDetails } from "./shared";
 import { ICloudProvider } from "../cloud-provider";
 
 export interface IGazellePipeline extends IPipeline {
-  kangarooPipelineId: string;
+  cloudProviderId: string;
 }
 
 export interface IGazellePipelineDetails extends IPipelineDetails {
   cloudProvider: ICloudProvider;
-  kangarooPipelineId: string;
+  cloudProviderId: string;
   gazellePipelineId: string;
 }

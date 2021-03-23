@@ -7,8 +7,8 @@ export interface ICoyoteStage extends IStage {
 }
 
 export interface ICoyotePipeline extends IPipeline {
-  kangarooPipelineId: string;
-  swanPipelineId: string;
+  cloudProviderId: string;
+  gitRepoId: string;
   branch: string;
   stages: ICoyoteStage[];
 }
@@ -19,10 +19,10 @@ export interface ICoyoteStageDetails extends IStageDetails {
 
 export interface ICoyotePipelineDetails extends IPipelineDetails {
   branch: string;
-  gitRepo: IGitRepo;
   stages: ICoyoteStageDetails[];
   cloudProvider: ICloudProvider;
-  kangarooPipelineId: string;
-  swanPipelineId: string;
+  cloudProviderId: string;
+  gitRepo: IGitRepo;
+  gitRepoId: string;
   coyotePipelineId: string;
 }
