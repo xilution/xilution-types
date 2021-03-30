@@ -110,3 +110,5 @@ export { IMessages } from "./types/messages";
 export { ICloudProvider } from "./types/cloud-provider";
 
 export { IGitRepo } from "./types/git-repo";
+
+export { IStack } from "./types/stack";
