@@ -112,3 +112,5 @@ export { ICloudProvider } from "./types/cloud-provider";
 export { IGitRepo } from "./types/git-repo";
 
 export { IStack } from "./types/stack";
+
+export { IStackPrototype } from "./types/stack-prototype";
