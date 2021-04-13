@@ -5,4 +5,5 @@ export interface IGitRepo extends IThing {
   name: string;
   provider: string;
   accountId: string;
+  organizationId: string;
 }

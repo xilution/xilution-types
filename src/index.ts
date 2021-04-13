@@ -109,8 +109,10 @@ export { IMessages } from "./types/messages";
 
 export { ICloudProvider } from "./types/cloud-provider";
 
+export { IGitProvider } from "./types/git-provider";
+
 export { IGitRepo } from "./types/git-repo";
 
 export { IStack } from "./types/stack";
 
-export { IStackPrototype } from "./types/stack-prototype";
+export { IParameterDefinition, IReference, IStackPrototype } from "./types/stack-prototype";

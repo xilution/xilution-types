@@ -6,4 +6,5 @@ export interface ICloudProvider extends IThing {
   provider: string;
   accountId: string;
   region: string;
+  organizationId: string;
 }
