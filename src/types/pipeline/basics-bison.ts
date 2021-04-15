@@ -1,7 +1,7 @@
-import {IPipeline, IPipelineDetails} from "./shared";
+import { IPipeline, IPipelineDetails } from "./shared";
 
 export interface IBisonPipeline extends IPipeline {
-  stackPrototype: {
+  pipelinePrototype: {
     id: string;
     version: string;
   };
@@ -11,7 +11,7 @@ export interface IBisonPipeline extends IPipeline {
 }
 
 export interface IBisonPipelineDetails extends IPipelineDetails {
-  stackPrototype: {
+  pipelinePrototype: {
     id: string;
     version: string;
   };

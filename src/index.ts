@@ -60,7 +60,7 @@ export {
   IMessage,
   IParameterDefinition,
   IReference,
-  IPipelinePrototype
+  IPipelinePrototype,
 } from "./types/pipeline/shared";
 
 export { IBisonPipeline, IBisonPipelineDetails } from "./types/pipeline/basics-bison";
