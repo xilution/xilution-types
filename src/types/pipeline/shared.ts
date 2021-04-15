@@ -8,7 +8,7 @@ export interface IStage {
 
 export interface IPipeline extends IThing {
   name: string;
-  pipelineType: string;
+  pipelineType?: string;
   organizationId: string;
   status?: IStatus;
 }
@@ -17,7 +17,7 @@ export interface IPipelineDetails {
   name: string;
   productCode: string;
   productId: string;
-  pipelineType: string;
+  pipelineType?: string;
   pipelineId: string;
 }
 
