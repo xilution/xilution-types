@@ -58,7 +58,12 @@ export {
   IPipelineExecutionLogsParameters,
   IFetchPipelinesResponse,
   IMessage,
+  IParameterDefinition,
+  IReference,
+  IPipelinePrototype
 } from "./types/pipeline/shared";
+
+export { IBisonPipeline, IBisonPipelineDetails } from "./types/pipeline/basics-bison";
 
 export { IGazellePipeline, IGazellePipelineDetails } from "./types/pipeline/basics-gazelle";
 
@@ -112,7 +117,3 @@ export { ICloudProvider } from "./types/cloud-provider";
 export { IGitProvider } from "./types/git-provider";
 
 export { IGitRepo } from "./types/git-repo";
-
-export { IStack } from "./types/stack";
-
-export { IParameterDefinition, IReference, IStackPrototype } from "./types/stack-prototype";
