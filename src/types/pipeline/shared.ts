@@ -207,3 +207,8 @@ export interface IPipelinePrototype extends IThing {
   active: boolean;
   parameterDefinitions: IParameterDefinition[];
 }
+
+export interface IFetchPipelinePrototypesResponse {
+  content: IPipelinePrototype[];
+  nextStartingId: string;
+}
