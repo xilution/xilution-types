@@ -118,3 +118,5 @@ export { ICloudProvider } from "./types/cloud-provider";
 export { IGitAccount } from "./types/git-account";
 
 export { IGitRepo } from "./types/git-repo";
+
+export { IGitRepoEvent } from "./types/git-repo-event";
