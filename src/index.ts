@@ -115,6 +115,6 @@ export { IMessages } from "./types/messages";
 
 export { ICloudProvider } from "./types/cloud-provider";
 
-export { IGitProvider } from "./types/git-provider";
+export { IGitAccount } from "./types/git-account";
 
 export { IGitRepo } from "./types/git-repo";
