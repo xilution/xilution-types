@@ -5,4 +5,5 @@ export interface IGitAccount extends IThing {
   provider: string;
   name: string;
   organizationId: string;
+  status?: string;
 }
