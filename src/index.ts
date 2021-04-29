@@ -61,7 +61,6 @@ export {
   IParameterDefinition,
   IReference,
   IPipelinePrototype,
-  IFetchPipelinePrototypesResponse,
 } from "./types/pipeline/shared";
 
 export { IBisonPipeline, IBisonPipelineDetails } from "./types/pipeline/basics-bison";
