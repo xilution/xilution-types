@@ -7,6 +7,6 @@ export interface IGitRepoEvent extends IThing {
   organizationId: string;
   eventType: string;
   parameters: {
-    [name: string]: string;
+    [name: string]: string | boolean;
   };
 }
