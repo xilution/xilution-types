@@ -217,3 +217,17 @@ export interface IPipelineEvent extends IThing {
     [name: string]: string | boolean;
   };
 }
+
+export interface IFetchPipelineEventsParameters {
+  organizationId: string;
+  pipelineId: string;
+  pageNumber: number;
+  pageSize: number;
+}
+
+export interface IPipelineEventParameters {
+  organizationId: string;
+  pipelineId: string;
+  eventId: string;
+}
+
