@@ -207,3 +207,13 @@ export interface IPipelinePrototype extends IThing {
   active: boolean;
   parameterDefinitions: IParameterDefinition[];
 }
+
+export interface IPipelineEvent extends IThing {
+  "@type": "pipeline-event";
+  pipelineId: string;
+  organizationId: string;
+  eventType: string;
+  parameters: {
+    [name: string]: string | boolean;
+  };
+}
