@@ -39,7 +39,7 @@ export {
   IStage,
   IPipeline,
   IPipelineDetails,
-  IStatus,
+  IPipelineStatus,
   IExtendedPipeline,
   IActionDetails,
   IStageDetails,
@@ -64,6 +64,10 @@ export {
   IPipelineEvent,
   IFetchPipelineEventsParameters,
   IPipelineEventParameters,
+  IntegrationStatus,
+  ContinuousIntegrationStatus,
+  PipelineEventType,
+  PipelineType,
 } from "./types/pipeline/shared";
 
 export { IBisonPipeline, IBisonPipelineDetails } from "./types/pipeline/basics-bison";
@@ -117,8 +121,12 @@ export { IMessages } from "./types/messages";
 
 export { ICloudProvider } from "./types/cloud-provider";
 
+export { ICloudProviderEvent, CloudProviderEventType } from "./types/cloud-provider-event";
+
 export { IGitAccount } from "./types/git-account";
+
+export { IGitAccountEvent, GitAccountEventType } from "./types/git-account-event";
 
 export { IGitRepo } from "./types/git-repo";
 
-export { IGitRepoEvent } from "./types/git-repo-event";
+export { IGitRepoEvent, GitRepoEventType } from "./types/git-repo-event";

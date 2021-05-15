@@ -1,6 +1,47 @@
 import { IThing } from "../thing";
 import { ILink } from "../link";
 
+export type IntegrationStatus =
+  | "CREATE_IN_PROGRESS"
+  | "CREATE_FAILED"
+  | "CREATE_COMPLETE"
+  | "ROLLBACK_IN_PROGRESS"
+  | "ROLLBACK_FAILED"
+  | "ROLLBACK_COMPLETE"
+  | "DELETE_IN_PROGRESS"
+  | "DELETE_FAILED"
+  | "DELETE_COMPLETE"
+  | "UPDATE_IN_PROGRESS"
+  | "UPDATE_COMPLETE_CLEANUP_IN_PROGRESS"
+  | "UPDATE_COMPLETE"
+  | "UPDATE_ROLLBACK_IN_PROGRESS"
+  | "UPDATE_ROLLBACK_FAILED"
+  | "UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS"
+  | "UPDATE_ROLLBACK_COMPLETE"
+  | "REVIEW_IN_PROGRESS"
+  | "IMPORT_IN_PROGRESS"
+  | "IMPORT_COMPLETE"
+  | "IMPORT_ROLLBACK_IN_PROGRESS"
+  | "IMPORT_ROLLBACK_FAILED"
+  | "IMPORT_ROLLBACK_COMPLETE"
+  | "NOT_FOUND"
+  | "UNKNOWN";
+
+export type ContinuousIntegrationStatus =
+  | "SUCCEEDED"
+  | "IN_PROGRESS"
+  | "FAILED"
+  | "STOPPED"
+  | "STOPPING"
+  | "SUPERSEDED"
+  | "NOT_EXECUTED_YET"
+  | "NOT_FOUND"
+  | "UNKNOWN";
+
+export type PipelineEventType = "PROVISION" | "REPROVISION" | "DEPROVISION" | "RUN_NOW";
+
+export type PipelineType = "AWS_SMALL";
+
 export interface IStage {
   name: string;
   links?: ILink[];
@@ -8,34 +49,34 @@ export interface IStage {
 
 export interface IPipeline extends IThing {
   name: string;
-  pipelineType?: string;
+  pipelineType?: PipelineType;
   organizationId: string;
-  status?: IStatus;
+  status?: IPipelineStatus;
 }
 
 export interface IPipelineDetails {
   name: string;
   productCode: string;
   productId: string;
-  pipelineType?: string;
+  pipelineType?: PipelineType;
   pipelineId: string;
 }
 
-export interface IStatus {
+export interface IPipelineStatus {
   continuousIntegrationStatus?: {
-    latestDownExecutionStatus?: string;
-    latestUpExecutionStatus?: string;
+    latestDownExecutionStatus?: ContinuousIntegrationStatus;
+    latestUpExecutionStatus?: ContinuousIntegrationStatus;
   };
-  infrastructureStatus?: string;
+  infrastructureStatus?: IntegrationStatus;
 }
 
 export interface IExtendedPipeline extends IPipeline {
-  status?: IStatus;
+  status?: IPipelineStatus;
 }
 
 export interface IActionDetails {
   name?: string;
-  status?: string;
+  status?: ContinuousIntegrationStatus;
   message?: string;
   startTime?: string;
   lastUpdateTime?: string;
@@ -45,21 +86,21 @@ export interface IActionDetails {
 export interface IStageDetails {
   name: string;
   actions?: IActionDetails[];
-  status?: string;
+  status?: ContinuousIntegrationStatus;
 }
 
 export interface IPipelineExecutionDetails {
   pipelineExecutionId?: string;
   name?: string;
   stages?: IStageDetails[];
-  status?: string;
+  status?: ContinuousIntegrationStatus;
 }
 
 export interface IPipelineExecutionSummary {
   pipelineExecutionId?: string;
   startTime?: string;
   lastUpdateTime?: string;
-  status?: string;
+  status?: ContinuousIntegrationStatus;
   message?: string;
   links?: ILink[];
   pipelineDetailsUrl?: string;
@@ -83,7 +124,7 @@ export interface IPipelineExecutionLogs {
 }
 
 export interface IActionExecution {
-  status?: string;
+  status?: ContinuousIntegrationStatus;
   name?: string;
   message?: string;
   startTime?: string;
@@ -93,13 +134,13 @@ export interface IActionExecution {
 
 export interface IStageExecution {
   name?: string;
-  status?: string;
+  status?: ContinuousIntegrationStatus;
   actions?: IActionExecution[];
 }
 
 export interface IPipelineExecution {
   name?: string;
-  status?: string;
+  status?: ContinuousIntegrationStatus;
   stages?: IStageExecution[];
 }
 
@@ -212,8 +253,8 @@ export interface IPipelineEvent extends IThing {
   "@type": "pipeline-event";
   pipelineId: string;
   organizationId: string;
-  eventType: string;
-  parameters: {
+  eventType: PipelineEventType;
+  parameters?: {
     [name: string]: string | boolean;
   };
 }

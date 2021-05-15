@@ -1,5 +1,7 @@
 import { IThing } from "./thing";
 
+type CloudProviderStatus = "NOT_FOUND" | "ACTIVE";
+
 export interface ICloudProvider extends IThing {
   "@type": "cloud-provider";
   name: string;
@@ -7,4 +9,5 @@ export interface ICloudProvider extends IThing {
   accountId: string;
   region: string;
   organizationId: string;
+  status?: CloudProviderStatus;
 }
