@@ -230,4 +230,3 @@ export interface IPipelineEventParameters {
   pipelineId: string;
   eventId: string;
 }
-
