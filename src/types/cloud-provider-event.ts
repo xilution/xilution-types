@@ -1,6 +1,7 @@
 import { IThing } from "./thing";
 
 export type CloudProviderEventType =
+  | string
   | "CREATE_CLOUD_ACCOUNT"
   | "PRIME_CLOUD_ACCOUNT"
   | "DELETE_CLOUD_ACCOUNT";

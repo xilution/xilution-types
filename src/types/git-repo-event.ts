@@ -1,6 +1,7 @@
 import { IThing } from "./thing";
 
 export type GitRepoEventType =
+  | string
   | "CREATE_REPO"
   | "CREATE_REPO_FROM_TEMPLATE_REPO"
   | "COMMIT_TO_REPO"

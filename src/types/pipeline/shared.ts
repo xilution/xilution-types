@@ -2,6 +2,7 @@ import { IThing } from "../thing";
 import { ILink } from "../link";
 
 export type IntegrationStatus =
+  | string
   | "CREATE_IN_PROGRESS"
   | "CREATE_FAILED"
   | "CREATE_COMPLETE"
@@ -28,6 +29,7 @@ export type IntegrationStatus =
   | "UNKNOWN";
 
 export type ContinuousIntegrationStatus =
+  | string
   | "SUCCEEDED"
   | "IN_PROGRESS"
   | "FAILED"
@@ -38,9 +40,9 @@ export type ContinuousIntegrationStatus =
   | "NOT_FOUND"
   | "UNKNOWN";
 
-export type PipelineEventType = "PROVISION" | "REPROVISION" | "DEPROVISION" | "RUN_NOW";
+export type PipelineEventType = string | "PROVISION" | "REPROVISION" | "DEPROVISION" | "RUN_NOW";
 
-export type PipelineType = "AWS_SMALL";
+export type PipelineType = string | "AWS_SMALL";
 
 export interface IStage {
   name: string;
