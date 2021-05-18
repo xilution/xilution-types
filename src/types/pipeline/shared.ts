@@ -263,13 +263,11 @@ export interface IPipelineEvent extends IThing {
 
 export interface IFetchPipelineEventsParameters {
   organizationId: string;
-  pipelineId: string;
   pageNumber: number;
   pageSize: number;
 }
 
 export interface IPipelineEventParameters {
   organizationId: string;
-  pipelineId: string;
   eventId: string;
 }
