@@ -269,5 +269,5 @@ export interface IFetchPipelineEventsParameters {
 
 export interface IPipelineEventParameters {
   organizationId: string;
-  eventId: string;
+  pipelineEventId: string;
 }
