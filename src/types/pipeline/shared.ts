@@ -1,7 +1,7 @@
 import { IThing } from "../thing";
 import { ILink } from "../link";
 
-export type IntegrationStatus =
+export type InfrastructureStatus =
   | string
   | "CREATE_IN_PROGRESS"
   | "CREATE_FAILED"
@@ -69,7 +69,7 @@ export interface IPipelineStatus {
     latestDownExecutionStatus?: ContinuousIntegrationStatus;
     latestUpExecutionStatus?: ContinuousIntegrationStatus;
   };
-  infrastructureStatus?: IntegrationStatus;
+  infrastructureStatus?: InfrastructureStatus;
 }
 
 export interface IExtendedPipeline extends IPipeline {
