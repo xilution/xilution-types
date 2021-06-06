@@ -64,7 +64,6 @@ export {
   IPipelineEvent,
   IFetchPipelineEventsParameters,
   IPipelineEventParameters,
-  IntegrationStatus,
   ContinuousIntegrationStatus,
   PipelineEventType,
   PipelineType,
@@ -130,3 +129,5 @@ export { IGitAccountEvent, GitAccountEventType } from "./types/git-account-event
 export { IGitRepo } from "./types/git-repo";
 
 export { IGitRepoEvent, GitRepoEventType } from "./types/git-repo-event";
+
+export { ITokenResponse, IAuthenticateResponse, IAuthorizeResponse } from "./types/oauth";
