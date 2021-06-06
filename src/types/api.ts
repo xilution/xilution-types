@@ -16,3 +16,8 @@ export interface IFetchThingsResponse<T> {
   id: ILink;
   links: ILink[];
 }
+
+export interface IError {
+  message: string;
+  requestId?: string;
+}

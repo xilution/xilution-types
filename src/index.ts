@@ -110,7 +110,7 @@ export { IHealth } from "./types/health";
 
 export { IBrand } from "./types/brand";
 
-export { ISearchCriteria, IFetchThingsResponse } from "./types/api";
+export { ISearchCriteria, IFetchThingsResponse, IError } from "./types/api";
 
 export { IProductEvent } from "./types/product-event";
 
