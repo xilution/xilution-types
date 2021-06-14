@@ -4,7 +4,7 @@ export interface IReceipt {
 
 export interface IInvoice {
   id: string;
-  start: string;
+  start?: string;
   receipt: IReceipt;
   total: number;
   currency?: string;
