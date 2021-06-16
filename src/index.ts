@@ -18,6 +18,25 @@ export { IClient } from "./types/client";
 
 export { IUser } from "./types/user";
 
+export { IAddress } from "./types/address";
+
+export { IAsset } from "./types/asset";
+
+export { ILocation } from "./types/location";
+
+export { CapabilityTypes, ICapability, IReservableAsset } from "./types/reservable-asset";
+
+export { IDesiredCapability, IReservation } from "./types/reservation";
+
+export {
+  IDateRange,
+  ITimeConfiguration,
+  DaysEnum,
+  TimeUnitsEnum,
+  IRecurrence,
+  IRepeatEvery,
+} from "./types/time";
+
 export {
   IRate,
   IUsagePlan,
@@ -102,7 +121,7 @@ export { ICreditCard } from "./types/credit-card";
 
 export { IReceipt, IInvoice } from "./types/invoice";
 
-export { IEffective } from "./types/shared";
+export { IEffective, IAdditionalProperties } from "./types/shared";
 
 export { ILambdaContext, ILambdaEvent, IActionResponse } from "./types/aws-lambda";
 
