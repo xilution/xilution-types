@@ -1,6 +1,6 @@
 {
   "name": "@xilution/xilution-types",
-  "version": "1.61.0",
+  "version": "1.62.0",
   "description": "Xilution - TypeScript Types",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -144,5 +144,6 @@
     }
   },
   "author": "npm@xilution.com",
-  "license": "UNLICENSED"
+  "license": "MIT",
+  "private": false
 }
