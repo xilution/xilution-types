@@ -28,6 +28,8 @@ export { CapabilityTypes, ICapability, IReservableAsset } from "./types/reservab
 
 export { IDesiredCapability, IReservation } from "./types/reservation";
 
+export { IReservationEvent } from "./types/reservation-event";
+
 export {
   IDateRange,
   ITimeConfiguration,
@@ -118,6 +120,8 @@ export {
 export { IActivation } from "./types/activation";
 
 export { ICreditCard } from "./types/credit-card";
+
+export { ICustomer } from "./types/customer";
 
 export { IReceipt, IInvoice } from "./types/invoice";
 
