@@ -8,5 +8,5 @@ export interface ICreditCard {
   name: string | null;
   number?: string;
   last4?: string;
-  brand: ICreditCardBrand;
+  brand?: ICreditCardBrand;
 }
