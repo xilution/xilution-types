@@ -123,7 +123,9 @@ export { ICreditCard } from "./types/credit-card";
 
 export { ICustomer } from "./types/customer";
 
-export { IReceipt, IInvoice } from "./types/invoice";
+export { IInvoiceSummary, IInvoiceLine, IInvoice } from "./types/invoice";
+
+export { IReceiptSummary, IReceipt } from "./types/receipt";
 
 export { IEffective, IAdditionalProperties } from "./types/shared";
 
@@ -154,3 +156,7 @@ export { IGitRepo } from "./types/git-repo";
 export { IGitRepoEvent, GitRepoEventType } from "./types/git-repo-event";
 
 export { ITokenResponse, IAuthenticateResponse, IAuthorizeResponse } from "./types/oauth";
+
+export { IMetric, IUsage } from "./types/usage";
+
+export { IUsageSummary } from "./types/usage-summary";
