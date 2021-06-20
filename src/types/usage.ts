@@ -1,7 +1,7 @@
 export interface IMetric {
   dimension: string;
   unit: string;
-  quantity: string;
+  quantity: number;
 }
 
 export interface IUsage {
