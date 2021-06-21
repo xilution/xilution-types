@@ -15,7 +15,7 @@ export interface IInvoiceLine {
   dimension: string;
   quantity: number;
   unit: string;
-  price: string;
+  price: number;
   currency: string;
   total: number;
 }
