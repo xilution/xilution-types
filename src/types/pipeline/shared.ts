@@ -251,7 +251,10 @@ export interface IPipelinePrototype extends IThing {
   version: string;
   description: string;
   active: boolean;
-  parameterDefinitions: IParameterDefinition[];
+  parameterDefinitions?: IParameterDefinition[];
+  terraform: {
+    swanRepoId: string;
+  };
 }
 
 export interface IPipelineEvent extends IThing {
