@@ -193,6 +193,16 @@ export interface IMessage {
   message: string;
 }
 
+export interface IDecomposedParameterDefinition {
+  name: string;
+  valueExpression: string;
+}
+
+export interface IDecompositionDefinition {
+  uri: string;
+  decomposedParameterDefinitions: IDecomposedParameterDefinition[];
+}
+
 export interface IParameterDefinition {
   name: string;
   label: {
@@ -234,6 +244,7 @@ export interface IParameterDefinition {
     nameExpression: string;
     valueExpression: string;
   };
+  decompositionDefinition: IDecompositionDefinition[];
 }
 
 export interface IReference {
@@ -246,6 +257,7 @@ export interface IReference {
 export interface IPipelinePrototype extends IThing {
   "@type": "pipeline-prototype";
   id: string;
+  organizationId: string;
   name: string;
   references?: IReference[];
   version: string;
