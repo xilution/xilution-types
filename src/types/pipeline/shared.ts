@@ -63,7 +63,7 @@ export interface IPipelineDetails {
   pipelineType?: PipelineType;
   parameters?: {
     [name: string]: string;
-  }
+  };
   pipelineId: string;
 }
 
