@@ -61,6 +61,9 @@ export interface IPipelineDetails {
   productCode: string;
   productId: string;
   pipelineType?: PipelineType;
+  parameters?: {
+    [name: string]: string;
+  }
   pipelineId: string;
 }
 
