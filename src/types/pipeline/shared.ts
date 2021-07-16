@@ -244,7 +244,7 @@ export interface IParameterDefinition {
     nameExpression: string;
     valueExpression: string;
   };
-  decompositionDefinition: IDecompositionDefinition[];
+  decompositionDefinition?: IDecompositionDefinition;
 }
 
 export interface IReference {
