@@ -266,6 +266,7 @@ export interface IPipelinePrototype extends IThing {
   parameterDefinitions?: IParameterDefinition[];
   terraform: {
     swanRepoId: string;
+    subPath: string;
   };
 }
 
