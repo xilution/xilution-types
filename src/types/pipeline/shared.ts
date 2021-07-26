@@ -222,7 +222,7 @@ export interface IParameterDefinition {
       | "VALIDATE_URL"
       | "VALIDATE_AGAINST_ALLOWED_VALUES"
       | "VALIDATE_DOMAIN";
-    parameters: (string | string[] | number)[];
+    parameters?: (string | string[] | number)[];
   };
   autoComplete?: string;
   readOnly?: boolean;
