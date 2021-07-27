@@ -256,7 +256,6 @@ export interface IReference {
 
 export interface IPipelinePrototype extends IThing {
   "@type": "pipeline-prototype";
-  id: string;
   organizationId: string;
   name: string;
   references?: IReference[];
