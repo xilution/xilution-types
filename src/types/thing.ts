@@ -1,4 +1,5 @@
 import { ILink } from "./link";
+import {IAccessPolicy} from "./access-policy";
 
 export interface IThing {
   "@type"?: string;
@@ -7,5 +8,6 @@ export interface IThing {
   links?: ILink[];
   createdAt?: string;
   modifiedAt?: string;
+  accessPolicy?: IAccessPolicy;
   [key: string]: any;
 }
