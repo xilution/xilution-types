@@ -162,3 +162,5 @@ export { IMetric, IUsage } from "./types/usage";
 export { IUsageSummary } from "./types/usage-summary";
 
 export { IAccessPolicy } from "./types/access-policy";
+
+export { IResourceLink } from "./types/resource-link";
