@@ -2,7 +2,7 @@ import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 import { IGitRepo } from "../git-repo";
 import { ICloudProvider } from "../cloud-provider";
 import { IGazellePipeline } from "./basics-gazelle";
-import {IGitAccount} from "../git-account";
+import { IGitAccount } from "../git-account";
 
 export interface IFoxStage extends IStage {
   apiBaseUrl?: string;

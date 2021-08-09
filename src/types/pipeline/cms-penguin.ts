@@ -4,7 +4,7 @@ import { ICoyoteStageDetails } from "./content-delivery-coyote";
 import { ICloudProvider } from "../cloud-provider";
 import { IGiraffePipeline } from "./basics-giraffe";
 import { IGazellePipeline } from "./basics-gazelle";
-import {IGitAccount} from "../git-account";
+import { IGitAccount } from "../git-account";
 
 export interface IPenguinStage extends IStage {
   siteUrl?: string;
