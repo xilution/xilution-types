@@ -2,6 +2,7 @@ import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 import { IGitRepo } from "../git-repo";
 import { ICloudProvider } from "../cloud-provider";
 import { IGazellePipeline } from "./basics-gazelle";
+import {IGitAccount} from "../git-account";
 
 export interface IFoxStage extends IStage {
   apiBaseUrl?: string;
@@ -27,5 +28,7 @@ export interface IFoxPipelineDetails extends IPipelineDetails {
   cloudProviderId: string;
   gitRepo: IGitRepo;
   gitRepoId: string;
+  gitAccount: IGitAccount;
+  gitAccountId: string;
   foxPipelineId: string;
 }
