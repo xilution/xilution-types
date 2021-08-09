@@ -1,6 +1,7 @@
 import { IPipeline, IPipelineDetails, IStage, IStageDetails } from "./shared";
 import { IGitRepo } from "../git-repo";
 import { ICloudProvider } from "../cloud-provider";
+import { IGitAccount } from "../git-account";
 
 export interface ICoyoteStage extends IStage {
   siteUrl?: string;
@@ -24,5 +25,7 @@ export interface ICoyotePipelineDetails extends IPipelineDetails {
   cloudProviderId: string;
   gitRepo: IGitRepo;
   gitRepoId: string;
+  gitAccount: IGitAccount;
+  gitAccountId: string;
   coyotePipelineId: string;
 }
