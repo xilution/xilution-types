@@ -226,6 +226,7 @@ export interface IParameterDefinition {
   };
   autoComplete?: string;
   readOnly?: boolean;
+  hidden?: boolean;
   placeholder?: {
     default: string;
     [locale: string]: string;
@@ -243,6 +244,9 @@ export interface IParameterDefinition {
     id: string;
     nameExpression: string;
     valueExpression: string;
+    createNew?: {
+      parameterDefinitions?: IParameterDefinition[];
+    }
   };
   decompositionDefinition?: IDecompositionDefinition;
 }
@@ -251,6 +255,7 @@ export interface IReference {
   id: string;
   uri: string;
   filterExpression: string;
+  activeExpression?: string;
   required?: boolean;
 }
 
