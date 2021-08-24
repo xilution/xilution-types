@@ -57,9 +57,9 @@ export interface IProductDetails extends IThing {
   productCode: string;
   phase: string;
   usagePlan: IUsagePlan;
-  limits: ILimits;
+  limits?: ILimits;
   logo: string;
-  spec: string;
+  spec?: string;
   portal?: string;
   i18n: {
     [locale: string]: {
