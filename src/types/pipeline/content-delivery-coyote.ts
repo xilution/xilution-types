@@ -27,5 +27,6 @@ export interface ICoyotePipelineDetails extends IPipelineDetails {
   gitRepoId: string;
   gitAccount: IGitAccount;
   gitAccountId: string;
+  domain?: string;
   coyotePipelineId: string;
 }

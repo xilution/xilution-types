@@ -34,5 +34,6 @@ export interface IPenguinPipelineDetails extends IPipelineDetails {
   gitRepoId: string;
   gitAccount: IGitAccount;
   gitAccountId: string;
+  domain?: string;
   penguinPipelineId: string;
 }

@@ -30,5 +30,6 @@ export interface IFoxPipelineDetails extends IPipelineDetails {
   gitRepoId: string;
   gitAccount: IGitAccount;
   gitAccountId: string;
+  domain?: string;
   foxPipelineId: string;
 }
